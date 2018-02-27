@@ -10,7 +10,8 @@ import java.util.Scanner;
 //on fail make sure to close scanner
 
 //Added new comment to test version control -andrea
-//More comments 
+//More comments
+//Adding a third new line to keep testing
 
 public class guessingGame {
     private int randomNumber;
