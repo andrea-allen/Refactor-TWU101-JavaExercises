@@ -9,9 +9,6 @@ import java.util.Scanner;
 
 //on fail make sure to close scanner
 
-//Added new comment to test version control -andrea
-//More comments
-//Adding a third new line to keep testing
 
 public class guessingGame {
     private int randomNumber;
@@ -29,7 +26,6 @@ public class guessingGame {
     public void play(){
         int guess;
         while (!gameOver){
-            askForGuess();
             guess = recieveGuess();
             check(guess);
         }
@@ -46,6 +42,7 @@ public class guessingGame {
     }
 
     private int recieveGuess() {
+        System.out.println("Please enter a valid positive integer");
         boolean validInput = false;
         int potentialGuess;
         int guess = 0; //not ideal
@@ -91,10 +88,6 @@ public class guessingGame {
         else{
             return false;
         }
-    }
-
-    private void askForGuess() {
-        System.out.println("Please enter a valid positive integer");
     }
 
 
