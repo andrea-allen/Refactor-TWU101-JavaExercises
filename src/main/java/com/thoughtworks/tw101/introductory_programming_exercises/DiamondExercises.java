@@ -1,6 +1,6 @@
 package com.thoughtworks.tw101.introductory_programming_exercises;
 
-import com.intellij.jarRepository.services.artifactory.Endpoint;
+//import com.intellij.jarRepository.services.artifactory.Endpoint;
 
 public class DiamondExercises {
     public static void main(String[] args) {

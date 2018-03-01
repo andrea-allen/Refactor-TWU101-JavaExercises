@@ -1,7 +1,7 @@
 package com.thoughtworks.tw101.exercises.exercise8;
 
-import com.sun.javaws.exceptions.InvalidArgumentException;
-import com.sun.tools.corba.se.idl.InvalidArgument;
+//import com.sun.javaws.exceptions.InvalidArgumentException;
+//import com.sun.tools.corba.se.idl.InvalidArgument;
 
 import java.util.ArrayList;
 import java.util.Random;
