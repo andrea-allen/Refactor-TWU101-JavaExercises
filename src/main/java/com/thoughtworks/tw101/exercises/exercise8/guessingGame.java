@@ -1,13 +1,10 @@
 package com.thoughtworks.tw101.exercises.exercise8;
 
-//import com.sun.javaws.exceptions.InvalidArgumentException;
-//import com.sun.tools.corba.se.idl.InvalidArgument;
 
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-//on fail make sure to close scanner
 
 
 public class guessingGame {
@@ -24,10 +21,13 @@ public class guessingGame {
     }
 
     public void play(){
-        int guess;
+        Guess guess = new Guess(); //this could be a new instance of class guess
+        guess.setCorrectAnswer(randomNumber);
         while (!gameOver){
-            guess = recieveGuess();
-            check(guess);
+            int newGuess = recieveGuess();
+            guess.setGuessValue(newGuess);  //guess.number is set to a new recieve guess
+            guess.check(); //guess should check itself
+            this.gameOver=guess.isCorrect;
         }
         scanner.close();
         printGuesses();
@@ -49,7 +49,6 @@ public class guessingGame {
             try {
                 potentialGuess = Integer.parseInt(scanner.next());
                 if (isWithinValidRange(potentialGuess)){
-                    //guess = potentialGuess;
                     guesses.add(potentialGuess);
                     validInput = true;
                 }
@@ -66,19 +65,7 @@ public class guessingGame {
         return potentialGuess;
     }
 
-    private void check(int guess){
-        if (guess == randomNumber) {
-            System.out.println("you guessed right! you win!");
-            gameOver = true;
-            return;
-        }
-        if (guess>randomNumber){
-            System.out.println("you guessed too high!");
-        }
-        else{
-            System.out.println("you guessed too low!");
-        }
-    }
+
 
     private boolean isWithinValidRange(int potentialGuess) {
         if (potentialGuess > 0 && potentialGuess < 100) {
