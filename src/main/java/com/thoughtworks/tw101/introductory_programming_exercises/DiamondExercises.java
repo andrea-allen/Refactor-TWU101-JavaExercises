@@ -23,6 +23,14 @@ public class DiamondExercises {
         }
     }
 
+    private static void drawAnUpsideDownTriangle(int n) {
+        StringBuffer[] triangle = getIsoscelesTriangle(n);
+        for (int i = (triangle.length) - 2; i>=0; i--) {
+            System.out.println(triangle[i]);
+        }
+
+    }
+
 //    Diamond
 //    Given a number n, print a centered diamond. Example for n=3:
 //              *
@@ -32,18 +40,15 @@ public class DiamondExercises {
 //              *
 
     private static void drawADiamond(int n) {
-        StringBuffer[] triangle = getIsoscelesTriangle(n);
 
-        for (int i = 0; i <triangle.length ; i++) {
-            System.out.println(triangle[i]);
-        }
-        for (int i = (triangle.length) - 2; i>=0; i--) {
-            System.out.println(triangle[i]);
-        }
+        drawAnIsoscelesTriangle(n);
+
+        drawAnUpsideDownTriangle(n);
+
     }
 
 
-//    Diamond with Name
+    //    Diamond with Name
 //    Given a number n, print a centered diamond with your name in place of the middle line. Example for n=3:
 //
 //             *
@@ -53,17 +58,14 @@ public class DiamondExercises {
 //             *
     private static void drawADiamondWithYourName(int n) {
 
-        StringBuffer[] triangle = getIsoscelesTriangle(n-1);
 
-        for (int i = 0; i <triangle.length ; i++) {
-            System.out.println(triangle[i]);
-        }
+        drawAnIsoscelesTriangle(n-1);
 
         System.out.println("shlok");
 
-        for (int i = (triangle.length) - 1; i>=0; i--) {
-            System.out.println(triangle[i]);
-        }
+        drawAnUpsideDownTriangle(n);
+
+
 
     }
 
