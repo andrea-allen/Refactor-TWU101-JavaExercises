@@ -1,6 +1,5 @@
 package com.thoughtworks.tw101.introductory_programming_exercises;
 
-//import com.intellij.jarRepository.services.artifactory.Endpoint;
 
 public class DiamondExercises {
     public static void main(String[] args) {
@@ -72,8 +71,8 @@ public class DiamondExercises {
     private static StringBuffer[] getIsoscelesTriangle(int n) {
         StringBuffer[] triangle = new StringBuffer[n];
         for (int i = 0; i<n ; i++) {
-            int numSpaces = n-i-1;  //empty spaces increase by one starting from bottom row to top
-            int numStars = (2*i)+1; //always the odd numbers
+            int numSpaces = n-i-1;
+            int numStars = (2*i)+1;
 
             StringBuffer currRow = new StringBuffer();
             addEmptySpaces(numSpaces,currRow);
@@ -86,7 +85,7 @@ public class DiamondExercises {
 
     private static void addEmptySpaces(int spaces, StringBuffer currRow){
         for (int j = 0; j < spaces ; j++) {
-            currRow.append(" "); //  add the blank space
+            currRow.append(" "); 
         }
     }
 
