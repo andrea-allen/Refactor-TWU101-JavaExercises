@@ -44,14 +44,13 @@ public class guessingGame {
     private int recieveGuess() {
         System.out.println("Please enter a valid positive integer");
         boolean validInput = false;
-        int potentialGuess;
-        int guess = 0; //not ideal
+        int potentialGuess = 0;
         do {
             try {
                 potentialGuess = Integer.parseInt(scanner.next());
                 if (isWithinValidRange(potentialGuess)){
-                    guess = potentialGuess;
-                    guesses.add(guess);
+                    //guess = potentialGuess;
+                    guesses.add(potentialGuess);
                     validInput = true;
                 }
                 else{
@@ -64,7 +63,7 @@ public class guessingGame {
 
         } while (!validInput);
 
-        return guess;
+        return potentialGuess;
     }
 
     private void check(int guess){
